@@ -1,24 +1,25 @@
 # hm-shopping
 
-## Project setup
+## 安装依赖
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 运行vue项目还要有node环境
+
+```
+node官网:
+https://nodejs.org/zh-cn
+```
+
+### 启动项目
+
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 打包项目
 ```
 yarn build
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
