@@ -46,6 +46,11 @@
 
 **`Vue3-big-event-admin`项目**
 
+```tips
+账号：adminPro01
+密码：654123
+```
+
 大事件管理，第一个`Vue3` 项目，用的是[Vite](https://cn.vitejs.dev/) 构建项目 + [Element组件库](https://element-plus.org/zh-CN/#/zh-CN) + [Pinia](https://pinia.vuejs.org/zh/) 持久化 这些技术栈，然后是比较简单的，文档的增删改查，然后用 `element`组件库快速实现页面的搭建，还算可以吧，也有登录功能的，用户登录信息 `token` 就是放在了浏览器本地存储里，那些数据就是通过[axios](https://axios-http.com/zh/) 调用后端接口放后端了，后面也待自己捣鼓捣鼓，黑马这接口也不知道能存在多长时间呢
 
 ---
