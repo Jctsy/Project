@@ -9,7 +9,6 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
@@ -23,7 +22,7 @@ export default defineConfig({
       targets: [
         {
           src: '404.html', 
-          dest: '/Project/VueProject/Vue3-big-event-admin/'        
+          dest: 'Project/VueProject/Vue3-big-event-admin/'        
         }
       ]
     })
