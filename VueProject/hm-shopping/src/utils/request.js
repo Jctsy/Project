@@ -5,7 +5,7 @@ import store from '@/store'
 // 好处: 不会污染原始的axios实例
 const instance = axios.create({
   baseURL: 'https://smart-shop.itheima.net/index.php?s=/api',
-  timeout: 5000
+  timeout: 10000
 })
 
 // 自定义配置 -请求/响应 拦截器
