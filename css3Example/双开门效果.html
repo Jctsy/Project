@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .back{
+            width: 800px;
+            height: 400px;
+            background-color: #1bb5b5;
+            display: flex;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .back .door{
+            width: 400px;
+            height: 400px;
+            transition: all .5s;
+        }
+        .back .door img{
+            width: 400px;
+            height: 400px;
+            transition: all .5s;
+        }
+        .back:hover .door-left{
+            transform: translateX(-400px);
+            transition: all .5s;
+        }
+        .back:hover .door-right{
+            transform: translateX(400px);
+            transition: all .5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <div class="door-left door">
+            <img src="images/img-left.jpg" alt="">
+        </div>
+        <div class="door-right door">
+            <img src="images/img-right.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

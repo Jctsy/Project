@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		body{
+			background: url(images/bg.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			margin: 300px auto;
+			position: relative;
+			transform-style: preserve-3d;
+			transform: rotateX(13deg) rotateY(13deg) rotateZ(13deg);
+			animation: run 1.5s linear infinite;
+		}
+		ul,ol{
+			transform-style: preserve-3d;
+		}
+		ul li{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+			opacity: .4;
+			transition: all 2s;
+		}
+		ul li:nth-child(1){
+			transform: translateZ(100px);
+		}
+		ul li:nth-child(2){
+			transform: translateZ(-100px);
+		}
+		ul li:nth-child(3){
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		ul li:nth-child(4){
+			transform: rotateX(90deg) translateZ(-100px);
+		}
+		ul li:nth-child(5){
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		ul li:nth-child(6){
+			transform: rotateY(90deg) translateZ(-100px);
+		}
+
+		ol li{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+			background-color: red;
+			opacity: .4;
+			transition: all 2s;
+		}
+		ol li:nth-child(1){
+			transform: translateZ(50px);
+		}
+		ol li:nth-child(2){
+			transform: translateZ(-50px);
+		}
+		ol li:nth-child(3){
+			transform: rotateX(90deg) translateZ(50px);
+		}
+		ol li:nth-child(4){
+			transform: rotateX(90deg) translateZ(-50px);
+		}
+		ol li:nth-child(5){
+			transform: rotateY(90deg) translateZ(50px);
+		}
+		ol li:nth-child(6){
+			transform: rotateY(90deg) translateZ(-50px);
+		}
+		@keyframes run{
+			0%{
+				transform: rotateX(0deg) rotateY(0deg);
+			}
+			25%{
+				transform: rotateX(90deg) rotateY(90deg);
+			}
+			75%{
+				transform: rotateX(270deg) rotateY(270deg);
+			}
+			100%{
+				transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
+		.box:hover ul li:nth-child(1){
+			transform: translateZ(200px);
+		}
+		.box:hover ul li:nth-child(2){
+			transform: translateZ(-200px);
+		}
+		.box:hover ul li:nth-child(3){
+			transform: rotateX(90deg) translateZ(200px);
+		}
+		.box:hover ul li:nth-child(4){
+			transform: rotateX(90deg) translateZ(-200px);
+		}
+		.box:hover ul li:nth-child(5){
+			transform: rotateY(90deg) translateZ(200px);
+		}
+		.box:hover ul li:nth-child(6){
+			transform: rotateY(90deg) translateZ(-200px);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ol>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+	</div>
+</body>
+</html>

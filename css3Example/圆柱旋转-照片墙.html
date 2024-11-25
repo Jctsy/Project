@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>圆柱旋转</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		ul{
+			/*width: 160px;
+			height: 240px;*/
+			width: 320px;
+			height: 200px;
+			background-size: cover;
+			background-position: center;
+			background-image: url(images/13.jpg);
+			margin: 100px auto;
+			transform: rotateX(-16deg) rotateY(0deg) rotateZ(0deg);
+			transform-style: preserve-3d;
+			animation: move1 10s linear infinite;
+		}
+		@keyframes move1{
+			0%{
+				transform: rotateX(-16deg) rotateY(0deg) rotateZ(0deg);
+			}
+			100%{
+				transform: rotateX(-16deg) rotateY(360deg) rotateZ(0deg);
+			}
+		}
+		li{
+			width: 160px;
+			height: 240px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-size: cover;
+			background-position: center;
+			background-image: url(images/01.jpg);
+		}
+		li:nth-child(1){
+			transform: rotateY(0deg) translateZ(300px);
+		}
+		li:nth-child(2){
+			transform: rotateY(30deg) translateZ(300px);
+			background-image: url(images/02.jpg);
+		}
+		li:nth-child(3){
+			transform: rotateY(60deg) translateZ(300px);
+			background-image: url(images/03.jpg);
+		}
+		li:nth-child(4){
+			transform: rotateY(90deg) translateZ(300px);
+			background-image: url(images/04.jpg);
+		}
+		li:nth-child(5){
+			transform: rotateY(120deg) translateZ(300px);
+			background-image: url(images/05.jpg);
+		}
+		li:nth-child(6){
+			transform: rotateY(150deg) translateZ(300px);
+			background-image: url(images/06.jpg);
+		}
+		li:nth-child(7){
+			transform: rotateY(180deg) translateZ(300px);
+			background-image: url(images/07.jpg);
+		}
+		li:nth-child(8){
+			transform: rotateY(210deg) translateZ(300px);
+			background-image: url(images/08.jpg);
+		}
+		li:nth-child(9){
+			transform: rotateY(240deg) translateZ(300px);
+			background-image: url(images/09.jpg);
+		}
+		li:nth-child(10){
+			transform: rotateY(270deg) translateZ(300px);
+			background-image: url(images/10.jpg);
+		}
+		li:nth-child(11){
+			transform: rotateY(300deg) translateZ(300px);
+			background-image: url(images/11.jpg);
+		}
+		li:nth-child(12){
+			transform: rotateY(330deg) translateZ(300px);
+			background-image: url(images/12.jpg);
+		}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 150px;
+			background-color: pink;
+			padding: 50px;
+			margin: 30px auto 0;
+			overflow: hidden;
+			position: relative;
+		}
+		p{
+			width: 100px;
+			height: 150px;
+			background-color: red;
+			float: left;
+			border-radius: 50% 50% 0 0;
+		}
+		p:first-child{
+			transform: rotate(46deg);
+			transform-origin: right bottom; 
+			animation: move1 2s linear infinite;
+		}
+		p:last-child{
+			transform: rotate(-46deg);
+			transform-origin: left bottom; 
+			animation: move2 2s linear infinite;
+		}
+		@keyframes move1{
+			0%{
+				transform: rotate(46deg) scale(1);
+			}
+			50%{
+				transform: rotate(46deg) scale(1.2);
+			}
+		}
+		@keyframes move2{
+			0%{
+				transform: rotate(-46deg) scale(1);
+			}
+			50%{
+				transform: rotate(-46deg) scale(1.2);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p></p>
+		<p></p>
+	</div>
+</body>
+</html>
