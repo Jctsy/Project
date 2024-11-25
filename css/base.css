@@ -55,3 +55,8 @@ h2,h3{
 .pro-ject .deta-il a:hover{
     color: #ff6700;
 }
+.foot{
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+}
