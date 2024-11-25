@@ -1,0 +1,230 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*清除浮动代码*/
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	width: 1100px;
+	margin: 0px auto 0;
+}
+body{
+	overflow: hidden;
+}
+.banner{
+	background: url(../images/banner.jpg) no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	height: 630px;
+	/*height: 70%;*/
+	width: 100%;
+}
+.nav{
+	padding-top: 20px; 
+}
+.nav img:nth-child(1){
+	display: block;
+	width: 70px;
+	height: 25px;
+	background: url(../images/original.png);
+	float: left;
+	margin-left: -12px;
+}
+.nav img:nth-child(2){
+	height: 23px;
+	float: left;
+	margin-left: 10px;
+}
+.nav p{
+	float: right;
+	font-size: 12px;
+	line-height: 28px;
+	color: #bfbfbf;
+}
+.nav a{
+	color: #fff;
+	margin-left: 5px;
+}
+.nav p a:hover{
+	color: #00bbee;
+}
+.sloa{
+	margin: 0 auto;
+	width: 750px;
+	height: 200px;
+	background: url(../images/slog.avif) no-repeat;
+	background-position: 50% 50%;
+	margin-top: 80px;
+}
+
+.banner .center{
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 160px;
+	left: 15%;
+}
+.center div{
+	float: left;
+	width: 178px;
+	height: 50px;
+	background-color: rgba(20,167,234,.7);
+	color: #fff;
+	margin-right: 20px;
+	line-height: 50px;
+	font-size: 14px;
+	padding-right: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.center div:hover{
+	background-color: rgba(20,167,234,1);	
+}
+.center div a{
+	display: block;
+	width: 24px;
+	height: 24px;
+	float: left;
+	margin: 13px 20px 10px 18px; 
+	background: url(../images/01_fws.png) no-repeat 0 0;
+	background-size: 24px 24px;
+}
+.center div:nth-child(2) a{
+	display: block;
+	margin: 13px 20px 10px 18px; 
+	background: url(../images/02_kfz.png) no-repeat 0 0;
+	background-size: 24px 24px;
+}
+.center div:nth-child(3) a{
+	display: block;
+	margin: 13px 25px 10px 18px; 
+	background: url(../images/03_sj.png) no-repeat 0 0;
+	background-size: 24px 24px;
+}
+.center div:nth-child(3) a{
+	display: block;
+	margin: 13px 20px 10px 18px; 
+	background: url(../images/04_jgyh.png) no-repeat 0 0;
+	background-size: 24px 24px;
+}
+.center div:nth-child(4) a{
+	display: block;
+	margin: 13px 20px 10px 18px; 
+	background: url(../images/05_gryh.png) no-repeat 0 0;
+	background-size: 24px 24px;
+}
+.sj_show .pay_buss{
+	border-bottom: 1px solid #fff;
+	float: left;
+	background-color: #14A7EA;
+	width: 178px;
+	padding-right: 10px;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	display: none;
+}
+.sj_show .cup_buss{
+	float: left;
+	background-color: #14A7EA;
+	width: 178px;
+	padding-right: 10px;
+	text-align: center;	
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	display: none;
+}
+.sj_show:hover .sj{
+	display: none;
+}
+.sj_show:hover .pay_buss{
+	display: block;
+	margin-top: -20px;
+}
+.sj_show:hover .cup_buss{
+	display: block;
+}
+.footer {
+	margin-top: 5px;
+	height: 30%;
+}
+.footer p{
+	text-align: center;
+	font-size: 12px;
+	color: #666666;
+}
+.footer .one_p a{
+	font-size: 12px;
+	color: #666666;
+	display: inline-block;
+	border-right: 1px solid #666666;
+	margin-left:5px;
+	padding-right:8px;
+
+}
+.footer div{
+	display: block;
+	text-align: center;
+}
+.footer p:hover{
+	cursor: pointer;
+}
+.footer span:hover{
+	cursor: pointer;	
+}
+.footer .foot_img{
+	margin: 5px auto 0;
+}
+.footer{
+	cursor: pointer;	
+}
+.foot_img{
+	margin: 10px auto 0;
+	width: 250px;
+    height: 30px;
+    text-align: center;
+}
+.foot_img a:first-child{
+	display: inline-block;
+	width: 18px;
+	height: 20px;
+	background: url(../images/foot_img.png) no-repeat 0,-5px;
+}
+.foot_img a:nth-child(2){
+	display: inline-block;
+	width: 43px;
+    height: 25px;
+    background: url(../images/foot_img.png) no-repeat -30px, 0px;
+}
+.foot_img a:nth-child(3){
+	display: inline-block;
+    width: 30px;
+    height: 25px;
+    background: url(../images/foot_img.png) no-repeat -75px, 0px;
+}
+.foot_img a:nth-child(4){
+	display: inline-block;
+    width: 18px;
+    height: 25px;
+    background: url(../images/foot_img.png) no-repeat -115px, 0;
+}
+.foot_img a:nth-child(5){
+	display: inline-block;
+    width: 18px;
+    height: 25px;
+    background: url(../images/foot_img.png) no-repeat -200px, 0;
+}
+.foot_img a:first-child:hover{
+	display: inline-block;
+	width: 18px;
+	height: 20px;
+	background: url(../images/foot_img.png) no-repeat 0,0;
+}

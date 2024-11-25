@@ -1,0 +1,25 @@
+/*初始化代码*/
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+img{
+	vertical-align: middle;
+}
+/*版心*/
+.container{
+	width: 1226px;
+	margin: 0 auto;
+}
+/*清除浮动代码*/
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}

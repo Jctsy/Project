@@ -1,0 +1,220 @@
+/*版心*/
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+/*头部导航栏*/
+.header{
+	background-color: #191D3A;
+	height: 60px;
+}
+.header .nav a{
+	float: left;
+	display: block;
+}
+.header .nav .logo{
+	width: 180px;
+	height: 60px;
+	background: url(../images/logo.png) no-repeat 10px 8px;
+	margin-left: 10px;
+	margin-top: 2px;
+}
+.header .nav a{
+	color: #818496;
+	padding: 18px 12px 18px 14px;
+	border-right: 1px solid #252947;
+	font-size: 14px;
+}
+.header .nav a:hover{
+	color: #fff;
+}
+.fir_shou{
+	background-color: red;
+}
+.header .nav .bac_grey{
+	background-color: #252947;
+	padding: 18px 18px;
+	color: #fff;
+}
+.header .nav a:nth-child(2){
+	padding: 18px 30px;
+}
+.header .nav .join_me{
+	background-color: #38B774;
+	color: #fff;
+	padding: 7px 22px 6px 22px;
+	margin-top: 12px;
+	margin-left: 8px;
+	border-radius: 4px;
+}
+.header .nav .lang_chi .lan_cha{
+	color: #38B774;
+	border: none;
+	margin-left: 20px;
+}
+.header .nav .lang_chi .lan_eng{
+	margin-left:-10px;
+}
+.header .nav .lang_chi .lan_eng:hover{
+	color: #38B774;
+	border-right: none;
+}
+/*banner图区域*/
+
+.banner{
+	width: 1263px;
+	height: 254px;
+	margin:0 auto;
+	background: url(../images/gamebanner.jpg) no-repeat center;
+}
+.banner{
+	position: relative;
+}
+.title_head{
+	margin-top: 30px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+.title_head .ga_title{
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+	width: 100px;
+	padding-left:30px;
+	background: url(../images/location.png) no-repeat 0px -92px;
+}
+
+.title_head .ga_cont{
+	float: right;
+	width: 100px;
+}
+.ga_cont a{
+	height: 20px;
+	width: 20px;
+	display: block;
+	background: url(../images/home.png) no-repeat 0px 0px;
+	float: left;
+
+}
+.ga_cont span{
+	float: right;
+    background: url(../images/icon.png) 250px 512px;
+    padding-left: 30px;	
+}
+.max_cont .left_chi{
+	float: left;
+	width: 200px;
+	padding-top: 44px;
+	margin-right: 20px;
+}
+.left_chi ul li{
+	display: block;
+	border-bottom: 1px solid #ccc;
+	padding: 0px 0px 30px 5px ;
+}
+.left_chi ul .ios_ch a{
+	display: block;
+	height: 40px;
+	width: 35px;
+	float: left;
+	background: url(../images/pad.png) no-repeat 1px 1px;
+}
+.left_chi ul li span{
+	color:#444866;
+	font-size: 16px;
+	display: block;
+	margin:30px 0px 0px 50px;
+}
+.left_chi ul .andr_ch a{
+	display: block;
+	height: 46px;
+	width: 46px;
+	float: left;
+	background: url(../images/pad.png) no-repeat 1px -95px;
+}
+ul .ios_ch:hover a{
+	background: url(../images/pad.png) no-repeat -125px 0px;
+}
+ul .ios_ch:hover span{
+	color: #38b774;
+}
+ul .andr_ch:hover a{
+	background: url(../images/pad.png) no-repeat -118px -95px;
+}
+ul .andr_ch:hover span{
+	color: #38b774;
+}
+.max_cont .right_cont{
+	float: left;
+	width: 780px;
+	padding-top: 44px;
+	margin-bottom: 60px;
+}
+.right_cont .game_mini{
+	border: 1px solid #ccc;
+	width: 355px;
+	margin: 10px;
+	float: left;
+	padding-top: 10px;
+	background-color: #f7f7f7;
+}
+.right_cont .game_mini:hover{
+	background-color: #fff;
+}
+.right_cont .game_mini img{
+	margin: 12px;
+}
+.right_cont .game_mini a{
+	font-size: 16px;
+	margin-left:50px;
+}
+.right_cont .game_mini .col_blac{
+	color: #444866;
+}
+.right_cont .game_mini .col_blac:hover{
+	color: #38b774;
+}
+.right_cont .game_mini .col_gren{
+	color: #38b774;
+	font-size: 12px;
+	line-height: 20px;
+}
+.foot_er{
+	background-color: #191d3a;
+	padding: 10px 0px 30px 0px;
+}
+.foot_er p,.foot_er p a{
+	color: #6c6e7e;
+}
+.foot_er p{
+	margin-top: 10px;
+}
+.foot_er p a:hover{
+	color: #fff;
+}
+.container .gav_logo{
+	height: 40px;
+	width: 40px;
+	background: url(../images/govIcon.gif);
+}
+/*top返回顶部的按钮*/
+#header_top{
+	display: block;
+	width: 68px;
+	height: 29px;
+	background: url(../images/top.png)0px 29px;
+	position: fixed;
+	right: 10px;
+	top:550px;
+	z-index: 1000;
+}
+#header_top:hover{
+	display: block;
+	width: 68px;
+	height: 29px;
+	background: url(../images/top.png) ;
+	position: fixed;
+	right: 10px;
+	top:550px;
+	z-index: 1000;
+}

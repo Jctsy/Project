@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1360",
+      "name": "新浪微博",
+      "font_class": "xinlangweibo",
+      "unicode": "f01af",
+      "unicode_decimal": 983471
+    },
+    {
+      "icon_id": "1366146",
+      "name": "微信公众号",
+      "font_class": "WeChat",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "13744081",
+      "name": "在线客服",
+      "font_class": "zaixiankefu",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "34515507",
+      "name": "问题反馈",
+      "font_class": "wentifankui",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    }
+  ]
+}

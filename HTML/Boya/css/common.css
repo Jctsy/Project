@@ -1,0 +1,23 @@
+/*初始化代码*/
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+img{
+	vertical-align: middle;
+}
+body{
+	font: 12px/1.5 'Microsoft Yahei', 'Simsun';
+}
+/*清除浮动代码*/
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}

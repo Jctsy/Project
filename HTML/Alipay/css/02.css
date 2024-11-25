@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*清除浮动代码*/
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	width: 1000px;
+	margin: 0px auto 0;
+}
+
+/*网页主体*/
+.main{
+	height: 100px;
+	width: 100px;
+	background: url(../images/banner.jpg) no-repeat;
+}
+/*网页头部*/
+.header .logo{
+	width: 70px;
+	height: 25px;
+	background: url(../images/logo.png);
+}

@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: #fafafa;
+    margin: 5px;
+    text-align: center;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* 设置文本默认被选中样式的修改 */
+::selection {
+    background: #ffb7b7; /* 粉红色背景 */
+    color: #fff;
+  }
+
+
+.pro-ject ul li a{
+    font-size: 14px;
+    color: #778899;
+    text-align: center;
+    display: inline-block;
+    transition: all .3s;
+}
+.pro-ject ul li a:hover{
+    color: #333;
+    transform: scale(1.3);
+    transition: all .3s;
+}
+.pro-ject ul{
+    display: flex;
+    justify-content: center;
+}
+.pro-ject ul li{
+    margin: 10px;
+}
+.pro-ject hr{
+    width: 500px;
+    color: #ff6700;
+    text-align: center;
+    margin: 10px auto;
+}
+h2,h3{
+    font-weight: 450;
+}
+
+.pro-ject .deta-il a{
+    font-size: 12px;
+    color: #333;
+}
+.pro-ject .deta-il a:hover{
+    color: #ff6700;
+}

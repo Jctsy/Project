@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人博客</title>
+	<body>
+	<style>
+		/*初始化代码*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		li{
+			list-style:none: 
+		}
+		/*去掉图片默认的下边空白*/
+		img{
+			vertical-align: middle;
+		}
+		body{
+			height: 2000px;
+			font-family: 'Microsoft Yahei','Simsun';
+		}
+		/*版心*/
+		.container{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.header{
+			height: 47px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.header .logo{
+			float: left;
+		}
+		.header .nav{
+			float: right;
+			width: 600px;
+			height: 46px;
+			background-color: #48ae15;
+			line-height: 46px;
+			text-align: center;
+			border-radius: 23px;
+		}
+		.header .nav a{
+			display: inline-block;
+			padding: 0px 20px;
+			font-size: 18px;
+			color: #fff;
+		}
+		.header .nav .active{
+			background-color: #f3ff41;
+			color: #000;
+		}
+		.header .nav a:hover{
+			background-color: #fff;
+			color: #000;
+		}
+		/*banner图*/
+		.banner img{
+			width: 670px;
+			height: 280px;
+		}
+		/*左半部分文章设置*/
+		.left_main{
+			width: 670px;
+			float: left;
+		}
+		.left_main .lm_title{
+			margin-top: 20px;
+			font-size: 16px;
+		}
+		.left_main .lm_title .lm_leiming{
+			font-size: 12px;
+			font-weight: normal;
+			padding-left: 15px;
+			float: right;
+			color:#756F71;
+		}
+		.left_main .lm_title a:hover{
+			text-decoration: underline;
+		}
+		.container .left_main .left_content{
+			padding-top: 25px;
+			padding-bottom:35px;
+			border-bottom: 1px solid #CCC;
+		}
+		.left_main .left_content .le_con_img{
+			width: 168px;
+			height: 137px;
+			float: left;
+		}
+		.left_main .left_content .le_con{
+    		width: 483px;
+    		margin-left: 190px
+		}
+		.left_main .left_content .le_con h3 a{
+			color: black;
+			font-size: 16px;
+		}
+		.left_main>h3{
+			border-bottom: 5px solid #DB6D4C;
+			padding-bottom: 10px;
+			margin-top: 10px;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		.left_main .left_content .le_con p{
+			font-size: 12px;
+			color: #756F71;
+			margin-top: 10px;
+			line-height: 20px;
+		}
+		/*左半部分文章底部的样式*/
+		.left_main .left_content .le_con .le_com_bottom{
+			margin-top: 15px;
+		}
+		.left_main .left_content .le_con .le_com_bottom a{
+			color: green;
+			font-size: 12px;
+		}
+		.left_main .left_content .le_con .le_com_bottom img{
+			margin-left: 10px;
+		}
+		.left_main .left_content .le_con .le_com_bottom img:first-child{
+			margin-left: 0px;
+		}
+		.left_main .left_content .le_con .le_com_bottom span{
+			font-size: 12px;
+			color:#756F71;
+		}
+		.left_main .left_content .le_con .le_com_bottom .lm_bot_right{
+			float: right;
+		}
+		.right_main{
+			width: 300px;
+			float: right;
+		}
+		/*关注我部分*/
+
+		
+		.right_main .follow_me h3{
+			font-size: 16px;
+			margin-top: 5px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #ccc;
+		}
+		.right_main .follow_me ul{
+			height: 150px;
+			/*background-color: #eee;*/
+		}
+		.right_main .follow_me li{
+			list-style: none;
+			display: inline-block;
+			margin: 5px 5px 0px 0px;
+			/*background-color: #ddd;*/
+			padding-top: 100px;
+			width: 65px;
+		}
+
+		.right_main .follow_me li a{
+			font-size: 12px;
+			color: #756F71;
+			text-decoration: none;
+			color: black;
+			height: 50px;
+		}
+		.right_main .follow_me .wb a{
+			margin-left: 12px;
+		}
+		.right_main .follow_me .twb a{
+			margin-left: 12px;
+		}
+		.right_main .follow_me .rss a{
+			margin-left: 25px;
+		}
+		.right_main .follow_me .e-m a{
+			margin-left: 20px;
+		}
+		.right_main .follow_me .wb{
+			background: url(images/wb01.jpg) no-repeat 10px 25px;
+		}
+		.right_main .follow_me .wb:hover{
+			background: url(images/wb02.png) no-repeat 10px 25px;
+		}
+		.right_main .follow_me .twb{
+			background: url(images/twb01.jpg) no-repeat 10px 25px;
+		}
+		.right_main .follow_me .twb:hover{
+			background: url(images/twb02.png) no-repeat 10px 25px;
+		}
+		.right_main .follow_me .rss{
+			background: url(images/rss01.jpg) no-repeat 10px 25px;
+		}
+		.right_main .follow_me .rss:hover{
+			background: url(images/rss02.png) no-repeat 10px 25px;
+		}
+		.right_main .follow_me .e-m{
+			background: url(images/em01.jpg) no-repeat 10px 25px;
+		}
+		.right_main .follow_me .e-m:hover{
+			background: url(images/em02.png) no-repeat 10px 25px;
+		}
+		/*排行榜部分*/
+		.right_main .rank_list{
+			margin-top: 30px;
+		}
+		.right_main .rank_list .rl_title{
+			border-bottom:  1px solid #ccc;
+		}
+		.right_main .rank_list .rl_title a{
+			display: inline-block;
+			text-decoration: none;
+			color: #666;
+			line-height: 50px;
+		}
+		.right_main .rank_list .rl_title a:hover{
+			height: 50px;
+			width: 100px;
+			background-color: #F77825;
+			text-align: center;
+			color: #fff;
+		}
+		.right_main .rank_list .rl_content{
+			margin-top: 10px;
+		}
+		.right_main .rank_list .rl_content ul li{
+			list-style: none;
+			line-height: 30px;
+			font-size: 18px;
+			border-bottom: 1px solid #ccc;
+		}
+		.right_main .rank_list .rl_content ul li span{
+			width: 18px;
+			height: 18px;
+			background-color: red;
+			color: white;
+			display: inline-block;
+			text-align: center;
+			line-height: 19px;
+			margin-right: 20px;
+		}
+		.right_main .rank_list .rl_content ul a{
+			text-decoration: none;
+			color: #756f71;
+			display: inline-block;
+			margin-top: 15px;
+		}
+		.right_main .rank_list .rl_content ul a li{
+			font-size: 12px;
+		}
+		.right_main .rank_list .rl_content ul a:hover{
+			border-bottom: 1px solid #666;
+			color: black;
+		}
+		.right_main .rank_list .rl_content ul li .col_FF3300{
+			background-color: #FF3300;
+		}
+		.right_main .rank_list .rl_content ul li .col_FF9900{
+			background-color: #FF9900;
+		}
+		.right_main .rank_list .rl_content ul li .col_FF3300{
+			background-color:#FF3300;
+		}
+		.right_main .rank_list .rl_content ul li .col_666{
+			background-color:#666;
+		}
+		.right_main .rank_list .rl_content ul li .col_666{
+			background-color:#666;
+		}
+		.right_main .rank_list .rl_content ul li .col_666{
+			background-color:#666;
+		}
+		/*标签云部分*/
+		.right_main .label_cloud{
+			width: 300px;
+		}
+		.right_main .label_cloud h3{
+			border-bottom: 1px solid #ccc;
+			padding: 20px 0px;
+			margin-bottom: 13px;
+		}
+		.right_main .label_cloud span{
+			height: 30px;
+			background-color: green;
+			color: white;
+			border-radius: 10px;
+			font-size: 12px;
+			float: left;
+			line-height: 32px;
+			margin: 10px 12px 0px 0px;
+			padding: 3px 11px;
+		}
+		.right_main .label_cloud .col_036564{
+			background-color: #036564;
+		}
+		.right_main .label_cloud .col_EB6841{
+			background-color: #EB6841;
+		}
+		.right_main .label_cloud .col_3FB8AF{
+			background-color: #3FB8AF;
+		}
+		.right_main .label_cloud .col_FE4365{
+			background-color: #FE4365;
+		}
+		.right_main .label_cloud .col_FC9D9A{
+			background-color: #FC9D9A;
+		}
+		.right_main .label_cloud .col_EDC951{
+			background-color: #EDC951;
+		}
+		.right_main .label_cloud .col_C8C8A9{
+			background-color: #C8C8A9;
+		}
+		.right_main .label_cloud .col_83AF9B{
+			background-color: #83AF9B;
+		}
+		.right_main .label_cloud .col_8A9B0F{
+			background-color: #8A9B0F;
+		}
+		.right_main .label_cloud .col_EB6841{
+			background-color: #EB6841;
+		}
+		.right_main .label_cloud .col_3FB8AF{
+			background-color: #3FB8AF;
+		}
+		.right_main .label_cloud .col_FE4365{
+			background-color: #FE4365;
+		}
+		.right_main .label_cloud .col_FC9D9A{
+			background-color: #FC9D9A;
+		}
+		.right_main .label_cloud .col_3299BB{
+			background-color: #3299BB;
+		}
+		/*图文推荐部分*/
+		.right_main .tw_recom{
+			width: 300px;
+			float: left;
+			margin-bottom: 20px;
+		}
+		.right_main .tw_recom .tw_recom_img img{
+			width: 70px;
+			height: 57px;
+			float: left;
+		}
+		.right_main .tw_recom h3{
+			border-bottom: 1px solid #ccc;
+			margin: 10px 0px;
+			padding-bottom: 10px;
+		}
+		.right_main .tw_recom .tw_recom_cont{
+			margin-left: 80px;
+		}
+		.right_main .tw_recom .tw_recom_cont p{
+			font-size: 15px;
+			padding-bottom: 15px;
+		}
+		.right_main .tw_recom .tw_recom_cont p a{
+			color: #33336e;
+		}
+		.right_main .tw_recom .tw_recom_cont p a:hover{
+			color: #ff6600;
+		}
+		.right_main .tw_recom .tw_recom_cont span{
+			font-size: 14px;
+			color: #756f71;
+			margin-right: 10px;
+		}
+
+		/*右下角小图片*/
+		.right_main .right_bo_img img{
+			margin-top: 10px;
+			width: 300px;
+			height: 245px;
+		}
+		/*友情链接部分*/
+		.right_main .help_link h3{
+			border-bottom: 1px solid #ccc;
+			margin: 10px 0px;
+			padding-bottom: 5px;
+		}
+		.right_main .help_link h3 a{
+			color: #756f71;
+			font-size: 14px; 
+			font-weight: normal;
+			float: right;
+		}
+		.right_main .help_link h3 a:hover{
+			text-decoration: underline;
+			color: #ff6600;
+		}
+		.right_main .help_link .hl_bottom{
+			width: 300px;
+			background-color: #f9f9f9;
+			padding: 10px 3px;
+		}
+		.right_main .help_link .hl_bottom ul li{
+			list-style:none;
+			display: inline-block;
+			margin: 0px 4px 0px 5px;
+			line-height: 25px;
+		}
+		.right_main .help_link .hl_bottom ul li a{
+			font-size: 14px;
+			color: #756f71;
+			text-decoration: none;
+			display: block;
+		}
+		.right_main .help_link .hl_bottom ul li a:hover{
+			color: black;
+		}
+	</style>
+</head>
+	<!-- 版心 -->
+	<div class="container">
+		<!-- 头部导航栏 -->
+		<div class="header">
+			<!-- 左边logo -->
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<!-- 右边导航条 -->
+			<div class="nav">
+				<a href="#" class="active">首页</a>
+				<a href="#">关于我</a>
+				<a href="#">文章</a>
+				<a href="#">心情</a>
+				<a href="#">相册</a>
+				<a href="#">留言</a>
+			</div>
+		</div>
+		<!-- 文章左半部分 -->
+			
+			<!-- 这是左下这一大块的大盒子 -->
+
+			<div class="left_main">
+				<!-- 这是banner图 -->
+				<div class="banner">
+				<img src="images/banner.jpg" alt="">
+				</div>
+				<!-- 这是标题 -->
+				<h3 class="lm_title">文章推荐
+				<a class="lm_leiming">武魂大罗</a>
+				<a class="lm_leiming">装逼大神</a>
+				<a class="lm_leiming">吊毛推荐</a>
+				</h3>
+				<!-- 这是一个框 -->
+				<div class="left_content">
+					<!-- 左边图片 -->
+					<img src="images/01.jpg" class="le_con_img">
+					<div class="le_con">
+						<!-- 右边标题 -->
+						<h3><a href="#">住在手机里的朋友</a></h3>
+						<!-- 右边内容 -->
+						<p>	"通信时代，无论是初次相见还是老友重逢，交换联系方式，常常是彼此交换名片，然后郑重或是出于礼貌用手机记下对方的电话号码。在快节奏的生活里，我们不知不觉中就成为住在别人手机里的朋友。又因某些意外，变成了别人手机里匆忙的过客，这种快餐式的友谊 ..."</p>
+						<!-- 右边的底部 -->
+						<div class="le_com_bottom">
+							<img src="images/note.png" alt="">
+							<a href="">个人博客</a>
+							<img src="images/time.png" alt="">
+							<span>2016-02-16</span>
+							<div class="lm_bot_right">
+								<img src="images/comment.png" alt="">
+								<span>评论</span>
+								<a href="">(60)</a>
+								<img src="images/eye.png" alt="">
+								<span>浏览</span>
+								<a href="">(666)</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 这是一个框 -->
+				<div class="left_content">
+					<!-- 左边图片 -->
+					<img src="images/02.jpg" class="le_con_img">
+					<div class="le_con">
+						<!-- 右边标题 -->
+						<h3><a href="#">教你怎样用欠费手机拨打电话</a></h3>
+						<!-- 右边内容 -->
+						<p>	教你怎样用欠费手机拨打电话",初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候..."</p>
+						<!-- 右边的底部 -->
+						<div class="le_com_bottom">
+							<img src="images/note.png" alt="">
+							<a href="">个人博客</a>
+							<img src="images/time.png" alt="">
+							<span>2016-02-16</span>
+							<div class="lm_bot_right">
+								<img src="images/comment.png" alt="">
+								<span>评论</span>
+								<a href="">(60)</a>
+								<img src="images/eye.png" alt="">
+								<span>浏览</span>
+								<a href="">(666)</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+								<!-- 这是一个框 -->
+				<div class="left_content">
+					<!-- 左边图片 -->
+					<img src="images/03.jpg" class="le_con_img">
+					<div class="le_con">
+						<!-- 右边标题 -->
+						<h3><a href="#">原来以为，一个人的勇敢是，删掉他的手机号码...</a></h3>
+						<!-- 右边内容 -->
+						<p>	"原来以为，一个人的勇敢是，删掉他的手机号码、QQ号码等等一切，努力和他保持距离。等着有一天，习惯不想念他，习惯他不在身边,习惯时间把他在我记忆里的身影磨蚀干净..."</p>
+						<!-- 右边的底部 -->
+						<div class="le_com_bottom">
+							<img src="images/note.png" alt="">
+							<a href="">个人博客</a>
+							<img src="images/time.png" alt="">
+							<span>2016-02-16</span>
+							<div class="lm_bot_right">
+								<img src="images/comment.png" alt="">
+								<span>评论</span>
+								<a href="">(60)</a>
+								<img src="images/eye.png" alt="">
+								<span>浏览</span>
+								<a href="">(666)</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 这是一个框 -->
+				<div class="left_content">
+					<!-- 左边图片 -->
+					<img src="images/05.jpg" class="le_con_img">
+					<div class="le_con">
+						<!-- 右边标题 -->
+						<h3><a href="#">手机的16个惊人小秘密，据说99.999%的人都不知</a></h3>
+						<!-- 右边内容 -->
+						<p>	"引导语：知道么，手机有备用电池，手机拨号码12593+电话号码=陷阱……手机具有很多你不知道的小秘密，说出来一定很惊奇！不信的话就来看看吧！..."</p>
+						<!-- 右边的底部 -->
+						<div class="le_com_bottom">
+							<img src="images/note.png" alt="">
+							<a href="">个人博客</a>
+							<img src="images/time.png" alt="">
+							<span>2016-02-16</span>
+							<div class="lm_bot_right">
+								<img src="images/comment.png" alt="">
+								<span>评论</span>
+								<a href="">(60)</a>
+								<img src="images/eye.png" alt="">
+								<span>浏览</span>
+								<a href="">(666)</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+								<!-- 这是一个框 -->
+				<div class="left_content">
+					<!-- 左边图片 -->
+					<img src="images/07.jpg" class="le_con_img">
+					<div class="le_con">
+						<!-- 右边标题 -->
+						<h3><a href="#">你面对的是生活而不是手机</a></h3>
+						<!-- 右边内容 -->
+						<p>	"每一次与别人吃饭，总会有人会拿出手机。以为他们在打电话或者有紧急的短信，但用余光瞟了一眼之后发现无非就两件事：1、看小说，2、上人人或者QQ..."</p>
+						<!-- 右边的底部 -->
+						<div class="le_com_bottom">
+							<img src="images/note.png" alt="">
+							<a href="">个人博客</a>
+							<img src="images/time.png" alt="">
+							<span>2016-02-16</span>
+							<div class="lm_bot_right">
+								<img src="images/comment.png" alt="">
+								<span>评论</span>
+								<a href="">(60)</a>
+								<img src="images/eye.png" alt="">
+								<span>浏览</span>
+								<a href="">(666)</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+								<!-- 这是一个框 -->
+				<div class="left_content">
+					<!-- 左边图片 -->
+					<img src="images/04.jpg" class="le_con_img">
+					<div class="le_con">
+						<!-- 右边标题 -->
+						<h3><a href="#">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></h3>
+						<!-- 右边内容 -->
+						<p>	"现在跨界联姻，时尚、汽车以及运动品牌联合手机制造商联合发布手机产品在行业里已经不再新鲜，上周我们给大家报道过著名手表制造商瑞士泰格·豪雅（Tag Heuer） 联合法国的手机制造商Modelabs发布的一款奢华手机的部分谍照，而近日该手机终于被正式发布了..."</p>
+						<!-- 右边的底部 -->
+						<div class="le_com_bottom">
+							<img src="images/note.png" alt="">
+							<a href="">个人博客</a>
+							<img src="images/time.png" alt="">
+							<span>2016-02-16</span>
+							<div class="lm_bot_right">
+								<img src="images/comment.png" alt="">
+								<span>评论</span>
+								<a href="">(60)</a>
+								<img src="images/eye.png" alt="">
+								<span>浏览</span>
+								<a href="">(666)</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+								<!-- 这是一个框 -->
+				<div class="left_content">
+					<!-- 左边图片 -->
+					<img src="images/05.jpg" class="le_con_img">
+					<div class="le_con">
+						<!-- 右边标题 -->
+						<h3><a href="#">手机的16个惊人小秘密，据说99.999%的人都不知</a></h3>
+						<!-- 右边内容 -->
+						<p>	"引导语：知道么，手机有备用电池，手机拨号码12593+电话号码=陷阱……手机具有很多你不知道的小秘密，说出来一定很惊奇！不信的话就来看看吧！..."</p>
+						<!-- 右边的底部 -->
+						<div class="le_com_bottom">
+							<img src="images/note.png" alt="">
+							<a href="">个人博客</a>
+							<img src="images/time.png" alt="">
+							<span>2016-02-16</span>
+							<div class="lm_bot_right">
+								<img src="images/comment.png" alt="">
+								<span>评论</span>
+								<a href="">(60)</a>
+								<img src="images/eye.png" alt="">
+								<span>浏览</span>
+								<a href="">(666)</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- 文章右半部分 -->
+		<div class="right_main">
+			<!-- /*关注我部分*/ -->
+			<div class="follow_me">
+				<h3>关注我</h3>
+				<ul>
+					<li class="wb"><a href="#" class="xlwb">新浪微博</a></li>
+					<li class="twb"><a href="#" class="txwb">腾讯微博</a></li>
+					<li class="rss"><a href="#" class="a_rss">RSS</a></li>
+					<li class="e-m"><a href="#" class="a_em">邮箱</a></li>
+				</ul>
+			</div>
+			<!-- /*排行榜部分*/ -->
+			<div class="rank_list">
+				<div class="rl_title">
+					<a href="#">点击排行</a>
+					<a href="#">最新文章</a>
+					<a href="#">站长推荐</a>
+				</div>
+				<div class="rl_content">
+					<ul>
+						<a href=""><li><span class="col_FF3300">1</span>住在手机里的朋友</li></a>
+						<a href=""><li><span class="col_FF9900">2</span>教你怎样用欠费手机拨打电话</li></a>
+						<a href=""><li><span class="col_FF9900">3</span>原来以为，一个人的勇敢是，删掉他的手</li></a>
+						<a href=""><li><span class="col_666">4</span>手机的16个惊人小秘密，据说99.999%的</li></a>
+						<a href=""><li><span class="col_666">5</span>你面对的是生活而不是手机</li></a>
+						<a href=""><li><span class="col_666">6</span>豪雅手机正式发布! 在法国全手工打造的奢侈品</li></a>
+					</ul>
+				</div>
+			</div>
+			<!-- /*标签云部分*/ -->
+			<div class="label_cloud">
+				<h3>标签云</h3>
+				<span class="col_036564">个人博客</span>
+				<span class="col_EB6841">web开发</span>
+				<span class="col_3FB8AF">前端设计</span>
+				<span class="col_FE4365">Html</span>
+				<span class="col_FC9D9A">CSS3</span>
+				<span class="col_EDC951">CSS3+HTML5</span>
+				<span class="col_C8C8A9">百度</span>
+				<span class="col_83AF9B">JavaScript</span>
+				<span class="col_8A9B0F">C/C++</span>
+				<span class="col_EB6841">ASP.NET</span>
+				<span class="col_3FB8AF">IOS开发</span>
+				<span class="col_FE4365">Andriod开发</span>
+				<span class="col_FC9D9A">PHP</span>
+				<span class="col_3299BB">VS</span>
+			</div>
+			<!-- /*图文推荐部分*/ -->
+			<div class="tw_recom">
+				<h3>图文推荐</h3>
+				<div class="tw_recom_img">
+					<img src="images/01.jpg" alt="">
+				</div>
+				<div class="tw_recom_cont">
+					<p><a href="#">住在手机里的朋友</a></p>
+					<img src="images/note_right.png">
+					<span>手机配件</span>
+					<img src="images/calendar.png">
+					<span>2016-02-16</span>
+				</div>
+			</div>
+
+			<div class="tw_recom">
+				<div class="tw_recom_img">
+					<img src="images/02.jpg" alt="">
+				</div>
+				<div class="tw_recom_cont">
+					<p><a href="#">教你怎样用欠费手机拨打电话</a></p>
+					<img src="images/note_right.png">
+					<span>手机配件</span>
+					<img src="images/calendar.png">
+					<span>2016-02-16</span>
+				</div>
+			</div>
+
+			<div class="tw_recom">
+				<div class="tw_recom_img">
+					<img src="images/03.jpg" alt="">
+				</div>
+				<div class="tw_recom_cont">
+					<p><a href="#">手机的16个惊人小秘密，据说99.999%的人都不知</a></p>
+					<img src="images/note_right.png">
+					<span>手机配件</span>
+					<img src="images/calendar.png">
+					<span>2016-02-16</span>
+				</div>
+			</div>
+
+			<div class="tw_recom">
+				<div class="tw_recom_img">
+					<img src="images/04.jpg" alt="">
+				</div>
+				<div class="tw_recom_cont">
+					<p><a href="#">原来以为，一个人的勇敢是，删掉他的手机号码...</a></p>
+					<img src="images/note_right.png">
+					<span>手机配件</span>
+					<img src="images/calendar.png">
+					<span>2016-02-16</span>
+				</div>
+			</div>
+
+			<div class="tw_recom">
+				<div class="tw_recom_img">
+					<img src="images/05.jpg" alt="">
+				</div>
+				<div class="tw_recom_cont">
+					<p><a href="#">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></p>
+					<img src="images/note_right.png">
+					<span>手机配件</span>
+					<img src="images/calendar.png">
+					<span>2016-02-16</span>
+				</div>
+			</div>
+			<!-- /*右下角小图片*/ -->
+			<div class="right_bo_img">
+				<img src="images/03.jpg" alt="">
+			</div>
+			<!-- /*友情链接部分*/ -->
+			<div class="help_link">
+				<h3>友情链接<a>申请友情链接</a></h3>
+				<div class="hl_bottom">
+					<ul>
+						<li><a href="">醉牛逼的武魂生涯</a></li>
+						<li><a href="">观察者网</a></li>
+						<li><a href="">中国投资</a></li>
+						<li><a href="">强国论坛</a></li>
+						<li><a href="">车讯网</a></li>
+						<li><a href="">360导航</a></li>
+						<li><a href="">一带一路门户网</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+			
+	</div>
+</body>	
+</html>
