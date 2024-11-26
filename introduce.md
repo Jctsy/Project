@@ -60,6 +60,31 @@
 
 ---
 
+**`JavaScript` 实例**
+
+几个实用的`Javascript` 小demo
+
+[页面滚动](./JavaScript/PageScrolling.html)：页面滚动到指定地点 显示tab栏 也很实用的功能 使用 `scrollTop` 属性实现
+
+[轮播图](./JavaScript/Slideshow.html)：点击按钮和下方小豆都可切换图片 默认轮播效果使用间歇函数实现的效果 按钮点击切换用数组实现
+
+[发布评论](./JavaScript/review.html)：用户输入文本 点击按钮或者回车键发布评论
+
+[协议查看倒计时](./JavaScript/LoginCountdown.html)：用户阅读协议 倒计时结束后 倒计时按钮消失 可以登录
+
+[小米搜索款](./JavaScript/SearchKuang.html)：点击搜索框 显示搜索记录 后续结合接口可以渲染数据
+
+[随机点名](./JavaScript/RandomRollCall.html)：很实用的功能 点击按钮开始点名 点结束按钮 显示被选中的数组元素并删除此元素
+
+[价格筛选](./JavaScript/PriceSelect.html)：对不同价位的商品进行筛选
+
+tab栏切换内容：[点击tab栏切换内容](./JavaScript/ClickTabChange.html) [悬停tab栏切换内容](./JavaScript/HoverTabChange.html) 顾名思义，通过鼠标悬停或者点击切换tab栏
+
+[随机1秒后更换背景图](./JavaScript/ReplaceBackgroundImage.html)：使用`随机函数` 和 `间歇函数` 实现 可能不是很实用
+
+
+---
+
 `vue` 目录，记录自己做过的 vue 项目
 
 **`hm-shopping`项目**

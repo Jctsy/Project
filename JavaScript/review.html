@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>发布评论</title>
+  <style>
+    .wrapper {
+      min-width: 400px;
+      max-width: 800px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: url(./images/avatar.jpg) no-repeat center / cover;
+      margin-right: 20px;
+    }
+
+    .wrapper textarea {
+      outline: none;
+      border-color: transparent;
+      resize: none;
+      background: #f5f5f5;
+      border-radius: 4px;
+      flex: 1;
+      padding: 10px;
+      transition: all 0.5s;
+      height: 30px;
+    }
+
+    .wrapper textarea:focus {
+      border-color: #e4e4e4;
+      background: #fff;
+      height: 50px;
+    }
+
+    .wrapper button {
+      background: #00aeec;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-left: 10px;
+      width: 70px;
+      cursor: pointer;
+    }
+
+    .wrapper .total {
+      margin-right: 80px;
+      color: #999;
+      margin-top: 5px;
+      opacity: 0;
+      transition: all 0.5s;
+    }
+
+    .list {
+      min-width: 400px;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .list .item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .list .item .info {
+      flex: 1;
+      border-bottom: 1px dashed #e4e4e4;
+      padding-bottom: 10px;
+    }
+
+    .list .item p {
+      margin: 0;
+    }
+
+    .list .item .name {
+      color: #FB7299;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .list .item .text {
+      color: #333;
+      padding: 10px 0;
+    }
+
+    .list .item .time {
+      color: #999;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <i class="avatar"></i>
+    <textarea id="tx" placeholder="发一条友善的评论" rows="2" maxlength="200"></textarea>
+    <button id="publishBtn">发布</button>
+  </div>
+  <div class="wrapper">
+    <span class="total">0/200字</span>
+  </div>
+  <div class="list">
+    <!-- 新评论将被插入到这里 -->
+  </div>
+
+  <script>
+    const tx = document.querySelector('#tx'); // 文本域
+    const total = document.querySelector('.total'); // 字符计数
+    const list = document.querySelector('.list'); // 评论列表容器
+    const publishBtn = document.querySelector('#publishBtn'); // 发布按钮
+
+    // 格式化时间的函数
+    function formatTime(date) {
+      const hours = String(date.getHours()).padStart(2, '0');
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      const seconds = String(date.getSeconds()).padStart(2, '0');
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    }
+
+    // 显示字符计数
+    tx.addEventListener('focus', function () {
+      total.style.opacity = 1; // 当文本域获得焦点时显示字符计数
+    });
+
+    // 隐藏字符计数
+    tx.addEventListener('blur', function () {
+      total.style.opacity = 0; // 当文本域失去焦点时隐藏字符计数
+    });
+
+    // 更新字符计数
+    tx.addEventListener('input', function () {
+      total.innerHTML = `${tx.value.length}/200字`; // 实时显示字符数
+    });
+
+    // 发布评论的通用逻辑
+    function publishComment() {
+      if (tx.value.trim()) {
+        // 创建一个新的评论项
+        const item = document.createElement('div');
+        item.classList.add('item');
+
+        // 评论内容模板
+        const commentHtml = `
+          <i class="avatar"></i>
+          <div class="info">
+            <p class="name">Xingshi</p>
+            <p class="text">${tx.value}</p>
+            <p class="time">${formatTime(new Date())}</p>
+          </div>
+        `;
+        item.innerHTML = commentHtml;
+
+        // 将新评论添加到评论列表
+        list.appendChild(item);
+
+        // 清空文本域并重置字符计数
+        tx.value = '';
+        total.innerHTML = '0/200字';
+      }
+    }
+
+    // 通过回车键发布评论
+    tx.addEventListener('keyup', function (e) {
+      if (e.key === 'Enter') {
+        publishComment(); // 调用发布评论函数
+      }
+    });
+
+    // 通过按钮点击发布评论
+    publishBtn.addEventListener('click', function () {
+      publishComment(); // 调用发布评论函数
+    });
+  </script>
+</body>
+
+</html>

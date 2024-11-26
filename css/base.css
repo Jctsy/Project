@@ -48,13 +48,13 @@ a{
     text-align: center;
     margin: 10px auto;
 }
-h2,h3{
+h2,summary{
     font-weight: 450;
     margin: 20px 0;
 }
 
 .pro-ject .deta-il a{
-    font-size: 12px;
+    font-size: 14px;
     color: 	#1E90FF;
 }
 .pro-ject .deta-il a:hover{
@@ -62,8 +62,8 @@ h2,h3{
 }
 
 .foot{
-    position: fixed;
-    bottom: 5px;
+    /* position: fixed;
+    bottom: 5px; */
     width: 100%;
     color: #778899;
 }
@@ -71,8 +71,8 @@ h2,h3{
     color: #4F4F4F;
 }
 .foot a{
-    color: #778899;
+    color: #333;
 }
 .foot a:hover{
-    color: #333;
+    color: #000;
 }
