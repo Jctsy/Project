@@ -12,6 +12,10 @@ li{
 a{
     text-decoration: none;
 }
+.container{
+    width: 1080px;
+    margin: 0 auto;
+}
 /* 设置文本默认被选中样式的修改 */
 ::selection {
     background: #ffb7b7; /* 粉红色背景 */
@@ -33,6 +37,7 @@ a{
 .pro-ject ul{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .pro-ject ul li{
     margin: 10px;
@@ -55,8 +60,19 @@ h2,h3{
 .pro-ject .deta-il a:hover{
     color: #ff6700;
 }
+
 .foot{
     position: fixed;
     bottom: 5px;
     width: 100%;
+    color: #778899;
+}
+.foot strong{
+    color: #4F4F4F;
+}
+.foot a{
+    color: #778899;
+}
+.foot a:hover{
+    color: #333;
 }
