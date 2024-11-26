@@ -71,8 +71,25 @@ h2,summary{
     color: #4F4F4F;
 }
 .foot a{
+    line-height: 30px;
+}
+.foot a{
     color: #333;
 }
 .foot a:hover{
-    color: #000;
+    color: #1296db;
+}
+.foot a:hover s{
+    background-image: url(../images/githubHover.png);
+    transition: all .3s;
+    transform: scale(1.5);
+}
+.foot s{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: -2px 3px;
+    background: url(../images/GitHub.png);
+    background-size: cover;
+    transition: all .3s;
 }

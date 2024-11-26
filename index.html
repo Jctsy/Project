@@ -13,7 +13,7 @@
 
     <div class="pro-ject container">
         <span class="deta-il"><a href="https://github.com/Jctsy/Project/blob/main/introduce.md" target="_blank"
-                title="show details">简介点这</a></span>
+                title="show details">详细内容点这</a></span>
         <!-- HTML -->
         <details class="details" open>
             <summary title="点击展示更多内容">HTML Project</summary>
@@ -225,13 +225,12 @@
         <p>
             <strong>注意：未作移动端适配 手机看起来可能很别扭 建议在PC端打开</strong>
         </p>
-        <span>2024 | ©Created by <a href="https://github.com/Jctsy" target="_blank">Xingshi</a></span>
+        <p><i class="year" style="font-style: normal;"></i> | ©Created by<a href="https://github.com/Jctsy" target="_blank" title="点击访问我的主页JCTSY"><s></s>Xingshi</a></p>
     </div>
 
     <script>
         // 获取所有的 details 标签
         const allDetails = document.querySelectorAll('details');
-    
         // 遍历每个 details，绑定 toggle 事件
         allDetails.forEach(details => {
             const summary = details.querySelector('summary');
@@ -243,6 +242,15 @@
                 }
             });
         });
+
+        // 获取当前年份并显示在页面上
+    function getCurrentYear() {
+      const currentDate = new Date();
+      return currentDate.getFullYear();
+    }
+
+    // 将年份插入到页面中的 #year 元素
+    document.querySelector('.year').textContent = getCurrentYear();
     </script>
 </body>
 
