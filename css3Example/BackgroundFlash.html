@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>闪烁背景颜色</title>
+    <style>
+        button {
+            display: block;
+            background-color: #fff;
+            color: #ff6700;
+            border: none;
+            margin: 10px auto;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 停止切换颜色按钮 -->
+    <button id="stopBtn">停止切换颜色</button>
+    <!-- 继续切换颜色按钮 -->
+    <button id="startBtn" style="display: none;">继续切换颜色</button>
+
+    <script>
+        // 获取停止和开始按钮
+        var stopBtn = document.querySelector('#stopBtn');
+        var startBtn = document.querySelector('#startBtn');
+
+        // 定义一个变量存储定时器
+        var change;
+        var color = 0;
+
+        // 定义切换颜色的方法
+        function setColor() {
+            color = color + 1;
+            if (color % 2 === 0) {
+                document.body.style.backgroundColor = "white";
+                stopBtn.style.backgroundColor = "white";
+                startBtn.style.backgroundColor = "white";
+            } else {
+                document.body.style.backgroundColor = "black";
+                stopBtn.style.backgroundColor = "black";
+                startBtn.style.backgroundColor = "black";
+            }
+        }
+
+        // 初始化：开始切换颜色
+        change = setInterval(setColor, 300);
+
+        // 停止切换颜色
+        stopBtn.onclick = function () {
+            clearInterval(change); // 清除定时器
+            stopBtn.style.display = "none"; // 隐藏停止按钮
+            startBtn.style.display = "block"; // 显示开始按钮
+        };
+
+        // 继续切换颜色
+        startBtn.onclick = function () {
+            change = setInterval(setColor, 300); // 重新启动定时器
+            startBtn.style.display = "none"; // 隐藏开始按钮
+            stopBtn.style.display = "block"; // 显示停止按钮
+        };
+    </script>
+</body>
+
+</html>

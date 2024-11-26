@@ -1,4 +1,6 @@
 > 一个仓库 记录自己曾经做的拿得出手的项目   
+>
+> [线上预览地址](https://jctsy.github.io/Project/)
 
 备注：图片来自网络，仅供学习交流
 
@@ -34,7 +36,27 @@
 
 **`CSS3`实例**
 
-里面放的就是一些比较炫酷 或者自己感觉不错的 `css` 的小案例吧，个人最喜欢的就是 [双开门](./css3Example/DoubleOpenDoor.html) 和 [照片墙](./css3Example/PhotoWall.html) 了，双开门是我自己找图，自己敲出来的，个人感觉很不错挺好玩的，照片墙的话，对于有对象的人来说很不错的项目，可惜我还没有 -_-，再有就是 [旋转魔方](./css3Example/RotatingBlock.html) 了，也挺炫酷的
+里面放的就是一些比较炫酷 或者自己感觉不错的 `css` 的小案例吧，个人最喜欢的就是 [双开门](./css3Example/DoubleOpenDoor.html) 和 [照片墙](./css3Example/PhotoWall.html) 了，[双开门](./css3Example/DoubleOpenDoor.html)是我自己找图，自己敲出来的，个人感觉很不错挺好玩的，照片墙的话，对于有对象的人来说很不错的项目，可惜我还没有 -_-，再有就是 [旋转魔方](./css3Example/RotatingBlock.html) 了，也挺炫酷的
+
+其他的话，又加入了几个实用的小功能: 
+
+[背景固定](./css3Example/backgroundFixed.html)：国外网站常用这个效果，主体在背景图前面，页面滚动到一定位置显示出来背景图，很有感觉
+
+商品展示： [1. 商品展示(定位布局)](./css3Example/ShopDetail.html) [2. 小米商城商品展示](./css3Example/XiaomiShopShow.html) [3. 闪烁的文本](./css3Example/FlashText.html) 这三个本质上都是商品详情页的展示，但是第一个用了很多种定位效果实现商品详情页展示；第二个是小米商城的商品详情页展示，加上了动画和阴影 看起来更丝滑；第三个是商品有促销的时候喜欢整个闪动的文本，吸引用户的关注
+
+[flex布局-抖音解决方案](./css3Example/flex_douyin.html)：顾名思义，练习了flex布局
+
+[点击变长输入框](./css3Example/FocusSearch.html)：这是一个简单的展示，后面多对 `UI` 优化一下也是一个不错的很有趣的交互输入框
+
+[视频mask遮罩](./css3Example/mask.html)：在很多网站展示视频的时候，默认就是这个效果，鼠标悬停的时候阴影遮罩消失，很实用的功能
+
+[精灵图](./css3Example/SpriteImg.html)：早些年为了优化页面加载速度和提升用户的体验，通常会把一个页面可能会用到的图标融合到一张图里面，通过 `bakgroundPosition` 属性去通过调整背景图的不同位置展示图标，随着技术的不断迭代进步和网络带宽的发展，这种精灵图做的网站已经很少了
+
+文本的省略：[单行文本省略](./css3Example/OnelineHideText.html) 和 [多行文本省略](./css3Example/ManylinesHideText.html) 顾名思义，很实用的功能，在需要隐藏大段文本的地方
+
+还有几个个性化小功能，在自己的网站上喜欢的话，可以加上 [图片跟随鼠标移动](./css3Example/ImgFollowMouse.html) 、[双开门](./css3Example/DoubleOpenDoor.html) 、[旋转魔方](./css3Example/RotatingBlock.html) 、[照片墙](./css3Example/PhotoWall.html) 、[背景闪烁](./css3Example/BackgroundFlash.html)(这个最好不要在晚上没开灯的时候用哈) 、[爱心](./css3Example/heart.html) 、[跳动的心](./css3Example/Heartbeat.html)
+
+至于
 
 ---
 

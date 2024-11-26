@@ -9,13 +9,14 @@
 </head>
 
 <body>
-    <h2>一个仓库 记录自己做过的项目</h2>
+    <h2>一个仓库 记录自己拿得出手的项目</h2>
 
     <div class="pro-ject container">
         <span class="deta-il"><a href="https://github.com/Jctsy/Project/blob/main/introduce.md" target="_blank"
-                title="show details">详细内容见</a></span>
-        <details>
-            <summary title="点击展开">HTML Project</summary>
+                title="show details">简介点这</a></span>
+        <!-- HTML -->
+        <details class="details" open>
+            <summary title="点击展示更多内容">HTML Project</summary>
             <ul>
                 <li>
                     <span>
@@ -61,40 +62,97 @@
                 </li>
             </ul>
         </details>
-
-        <details>
-            <summary title="点击展开">CSS & JavaScript 小demo</summary>
+        <!-- CSS -->
+        <details class="details">
+            <summary title="点击展示更多内容">CSS Demo</summary>
         <ul>
             <li>
                 <span>
-                    <a href="./css3Example/DoubleOpenDoor.html" target="_blank">双开门效果</a>
+                    <a href="./css3Example/DoubleOpenDoor.html" target="_blank">双开门效果(交互)</a>
+                </span>
+            </li>
+            
+            <li>
+                <span>
+                    <a href="./css3Example/PhotoWall.html" target="_blank">照片墙(个性化)</a>
                 </span>
             </li>
             <li>
                 <span>
-                    <a href="./css3Example/heart.html" target="_blank">心♥</a>
+                    <a href="./css3Example/backgroundFixed.html" target="_blank">背景固定(个性化)</a>
+                </span>
+            </li>
+            
+            <li>
+                <span>
+                    <a href="./css3Example/FlashText.html" target="_blank">闪烁的文本</a>
                 </span>
             </li>
             <li>
                 <span>
-                    <a href="./css3Example/Heartbeat.html" target="_blank">跳动的心</a>
+                    <a href="./css3Example/ShopDetail.html" target="_blank">商品详情(定位布局)</a>
                 </span>
             </li>
             <li>
                 <span>
-                    <a href="./css3Example/PhotoWall.html" target="_blank">照片墙</a>
+                    <a href="./css3Example/XiaomiShopShow.html" target="_blank">小米商品详情(阴影)</a>
                 </span>
             </li>
             <li>
                 <span>
-                    <a href="./css3Example/RotatingBlock.html" target="_blank">旋转的方块</a>
+                    <a href="./css3Example/flex_douyin.html" target="_blank">flex布局-抖音解决方案</a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="./css3Example/FocusSearch.html" target="_blank">点击变大的输入框</a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="./css3Example/mask.html" target="_blank">视频mask遮罩<b>(实用)</b></a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="./css3Example/SpriteImg.html" target="_blank">精灵图(现在不多了)</a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="./css3Example/OnelineHideText.html" target="_blank">单行文本省略<b>(实用)</b></a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="./css3Example/ManglinesHideText.html" target="_blank">多行文本省略<b>(实用)</b></a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="./css3Example/TextFollowMouse.html" target="_blank">图片跟随鼠标(个性化)</a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="./css3Example/BackgroundFlash.html" target="_blank">背景闪烁(不实用)</a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="./css3Example/heart.html" target="_blank">心♥(个性化)</a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="./css3Example/Heartbeat.html" target="_blank">跳动的心(个性化)</a>
                 </span>
             </li>
         </ul>
         </details>
         
-        <details open>
-            <summary title="点击展开" >Vue Project</summary>
+        <details class="details" open>
+            <summary title="点击展示更多内容">Vue Project</summary>
         <ul>
             <li>
                 <span>
@@ -124,6 +182,22 @@
         <span>2024 | ©Created by <a href="https://github.com/Jctsy" target="_blank">Xingshi</a></span>
     </div>
 
+    <script>
+        // 获取所有的 details 标签
+        const allDetails = document.querySelectorAll('details');
+    
+        // 遍历每个 details，绑定 toggle 事件
+        allDetails.forEach(details => {
+            const summary = details.querySelector('summary');
+            details.addEventListener('toggle', () => {
+                if (details.open) {
+                    summary.title = '点击收起信息';
+                } else {
+                    summary.title = '点击展示更多内容';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多行文本省略</title>
+	<style>
+		p{
+			width: 500px;
+			line-height: 20px;
+			border: 1px solid #aaa;
+			/*将对象作为弹性伸缩盒子显示*/
+			display: -webkit-box;
+			/*限制文本显示的行数*/
+			-webkit-line-clamp: 3;
+			/*设置成检索伸缩盒子的子元素的排列方式*/
+			-webkit-box-orient:vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	</style>
+</head>
+<body>
+	<p>这是前端技术学习的起点，包括 HTML、CSS 和 JavaScript，它们是网页开发的核心基础。
+		HTML 负责构建页面的结构和内容，CSS 用于美化页面的样式和布局，而 JavaScript 则赋予网页动态交互的能力。
+		这三者共同构成了前端开发的基本技术栈，为创建丰富的用户体验奠定了坚实的基础。
+		掌握这些技能后，你可以进一步学习现代框架如 Vue、React 或 Angular，提高开发效率，实现更复杂的功能。
+		</p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>图片跟随鼠标移动</title>
+    <style>
+        /* 设置图片位置为绝对定位，初始位置居中 */
+        img {
+            position: absolute;
+            transform: translate(-50%, -50%); /* 保证图片中心跟随鼠标 */
+            cursor: pointer; /* 自定义鼠标样式 */
+            width: 35px;
+            height: 35px;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden; /* 防止页面出现滚动条 */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/t1.png" id="tu" alt="图片无法正常显示">
+    <script>
+        // 获取图片元素
+        const img = document.getElementById('tu');
+
+        // 页面加载后监听鼠标移动事件
+        document.addEventListener('mousemove', function (e) {
+            // 获取鼠标坐标
+            const x = e.pageX;
+            const y = e.pageY;
+
+            // 更新图片位置，让图片跟随鼠标
+            img.style.left = `${x}px`;
+            img.style.top = `${y}px`;
+        });
+
+        // 初始位置设置为屏幕中心
+        const initX = window.innerWidth / 2;
+        const initY = window.innerHeight / 2;
+        img.style.left = `${initX}px`;
+        img.style.top = `${initY}px`;
+    </script>
+</body>
+
+</html>

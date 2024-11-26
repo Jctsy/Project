@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>闪烁的文本</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            border: 2px solid gray;
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- ☆☆☆欢迎光临☆☆☆ -->
+    <!-- ★★★今日特卖★★★ -->
+    <h3>会闪烁的文字</h3>
+    <div id="text"></div>
+    <script>
+        var div=document.getElementById('text');
+        setInterval(fn,500);
+        var flag=1;
+        function fn(){
+            //通过设置变量0和1，来实现切换文字的效果
+            if(flag==1){
+                div.innerHTML='☆☆☆欢迎光临☆☆☆';
+                flag=0;
+            }else{
+                div.innerHTML='★★★今日特卖★★★';
+                flag=1;
+            }
+        }
+    </script>
+</body>
+</html>

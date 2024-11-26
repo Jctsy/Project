@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精灵图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        ul{
+            width: 1130px;
+            margin: 100px auto 0;
+            display: flex;
+            justify-content: space-between;
+            line-height: 42px;
+        }
+        ul li a{
+            float: left;
+            width: 40px;
+            height: 42px;
+            background: url(images/sprite.png) no-repeat; 
+            background-position: 0px -192px; 
+        }
+        ul li:nth-child(2) a{
+            background-position: -40px -192px;
+        }
+        ul li:nth-child(3) a{
+            background-position: -80px -192px;
+        }
+        ul li:nth-child(4) a{
+            background-position: -120px -192px;
+        }
+        ul li span{
+            font-weight: 600;
+            font-size: 18px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#"></a>
+            <span>品类齐全，轻松购物</span>
+        </li>
+        <li>
+            <a href="#"></a>
+            <span>多仓直发，极速配送</span>
+        </li>
+        <li>
+            <a href="#"></a>
+            <span>正品行货，精致服务</span>
+        </li>
+        <li>
+            <a href="#"></a>
+            <span>天天低价，畅选无忧</span>
+        </li>
+    </ul>
+</body>
+</html>

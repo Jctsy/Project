@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景固定</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			height: 600px;
+			background-color: skyblue;
+		}
+		.center{
+			background-image: url(images/bgimg.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 200px;
+			background-attachment: fixed;
+			opacity: .6;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div class="center"></div>
+	<div></div>
+</body>
+</html>
